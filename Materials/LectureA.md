@@ -3,7 +3,7 @@
 
 # 🧩 Why do programs need different data types?
 
-## 1. What does a data type mean?
+## 🧠 1. What does a data type mean?
 
 A data type defines **what kind of values a variable can hold** and **what operations can be performed** on those values.  
 Data types are fundamental principles of programming—they tell the computer how to process data.
@@ -12,7 +12,7 @@ Data types are fundamental principles of programming—they tell the computer ho
 
 ---
 
-## 2. Why are data types needed?
+## 💬 2. Why are data types needed?
 
 A computer ultimately processes everything as bits (0 and 1).  
 The programmer’s job is to specify **how these bits should be interpreted**.
@@ -31,7 +31,7 @@ A data type **gives meaning to data.**
 
 ---
 
-## 3. Data types help programs work correctly
+## 🎯 3. Data types help programs work correctly
 
 Without data types, a program wouldn’t know:
 
@@ -52,7 +52,7 @@ print(a + c)     # error → cannot add int + str
 
 ---
 
-## 4. Different data types serve different purposes
+## 📦 4. Different data types serve different purposes
 
 | Data Type | Example                      | Purpose                     |
 | --------- | ---------------------------- | --------------------------- |
@@ -65,7 +65,7 @@ print(a + c)     # error → cannot add int + str
 
 ---
 
-## 5. Using data types makes programs more reliable
+## 🧱 5. Using data types makes programs more reliable
 
 When the correct data types are used:  
 ✅ Fewer errors  
@@ -75,7 +75,7 @@ When the correct data types are used:
 
 ---
 
-## 6. Practical analogy 🧠
+## 🧮 6. Practical analogy
 
 Think of data types as **containers in a kitchen**:
 
@@ -89,7 +89,7 @@ If you try to pour juice onto a plate, it doesn’t work—just like trying to a
 
 ---
 
-## 7. Summary ✨
+## ✨ 7. Summary 
 
 **Different data types are needed so that:**
 

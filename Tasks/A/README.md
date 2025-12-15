@@ -16,12 +16,14 @@ The goal of this task is to practice:
 
 ## 📄 Description
 
-You are given a text file **`resevations.txt`** that contains one line per reservation. You are also given a Python script **`read_resevations.py`** that reads the reservations from **`resevations.txt`**. Fields are separated by the pipe character `|`.
+* You are given a text file **`resevations.txt`** that contains one line per reservation.
+* You are also given a Python script **`read_resevations.py`** that reads the reservations from **`resevations.txt`**.
+* Fields are separated by the pipe character `|`.
 
 > [!NOTE]
 > **You are not allowed to alter the reservations.txt file in this task!**
 
-**Example line:**
+**Example line in the `resevations.txt` file:**
 
 ```
 123|Anna Virtanen|2025-10-31|10:00|2|19.95|True|Meeting Room A|0401234567|anna.virtanen@example.com
