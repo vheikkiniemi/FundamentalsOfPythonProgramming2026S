@@ -18,8 +18,8 @@ The goal of this task is to practice:
 
 You are given a text file **`resevations.txt`** that contains one line per reservation. You are also given a Python script **`read_resevations.py`** that reads the reservations from **`resevations.txt`**. Fields are separated by the pipe character `|`.
 
-> [!TIP]
-> This way of structuring data is very common — and Python is great at handling it!
+> [!NOTE]
+> **You are not allowed to alter the reservations.txt file in this task!**
 
 **Example line:**
 
