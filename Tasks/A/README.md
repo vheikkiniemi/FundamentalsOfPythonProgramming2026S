@@ -16,14 +16,14 @@ The goal of this task is to practice:
 
 ## 📄 Description
 
-* You are given a text file **`resevations.txt`** that contains one line per reservation.
-* You are also given a Python script **`read_resevations.py`** that reads the reservations from **`resevations.txt`**.
+* You are given a text file **`reservations.txt`** that contains one line per reservation.
+* You are also given a Python script **`read_reservations.py`** that reads the reservations from **`reservations.txt`**.
 * Fields are separated by the pipe character `|`.
 
 > [!NOTE]
 > **You are not allowed to alter the reservations.txt file in this task!**
 
-**Example line in the `resevations.txt` file:**
+**Example line in the `reservations.txt` file:**
 
 ```
 123|Anna Virtanen|2025-10-31|10:00|2|19.95|True|Meeting Room A|0401234567|anna.virtanen@example.com
@@ -48,8 +48,8 @@ The line contains the following fields:
 
 ## 🧠 Task Instructions
 
-1.  Copy the file **`resevations.txt`** into your own **Git repo** under the folder **`TaskA`**.
-2.  Copy the Python script **`read_resevations.py`** into your **Git repo** under the folder **`TaskA`**.
+1.  Copy the file **`reservations.txt`** into your own **Git repo** under the folder **`TaskA`**.
+2.  Copy the Python script **`read_reservations.py`** into your **Git repo** under the folder **`TaskA`**.
 3.  Rename the Python script file to **`task_a.py`**
 4.  Modify the script so that, when executed, it prints the following output:
 
@@ -73,18 +73,18 @@ Email: anna.virtanen@example.com
 *   Split the line using the `split('|')` method as in the example below → produces a list-type variable (the following examples then work):
 
     ```python
-    resevation = resevation.split('|')
+    reservation = reservation.split('|')
     ```
 
 > [!NOTE]  
-> If you don’t do the above, in the examples below `resevation[0]` is equivalent to `resevation.split('|')[0]`.
+> If you don’t do the above, in the examples below `reservation[0]` is equivalent to `reservation.split('|')[0]`.
 
 *   Convert data types. A few examples:
 
     ```python
-    resevation_number = int(resevation[0])
-    hourly_price = float(resevation[5])
-    paid = bool(resevation[6])
+    reservation_number = int(reservation[0])
+    hourly_price = float(reservation[5])
+    paid = bool(reservation[6])
     ```
 
 *   You can convert the date and start time to `datetime`:
@@ -92,10 +92,10 @@ Email: anna.virtanen@example.com
     ```python
     from datetime import datetime
 
-    day = datetime.strptime(resevation[2], "%Y-%m-%d").date()
+    day = datetime.strptime(reservation[2], "%Y-%m-%d").date()
     finnish_day = day.strftime("%d.%m.%Y")
 
-    time = datetime.strptime(resevation[3], "%H:%M").time()
+    time = datetime.strptime(reservation[3], "%H:%M").time()
     finnish_time = time.strftime("%H.%M")
     ```
 
