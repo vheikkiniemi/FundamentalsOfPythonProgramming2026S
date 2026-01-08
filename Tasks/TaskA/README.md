@@ -119,7 +119,7 @@ The line contains the following fields:
 
 ## 📤 Submission Instructions to Itslearning
 
-Submit a **link to your GitHub repo** and a **screenshot of the console** showing the program execution and output.
+Submit a **link to your GitHub repo** ([Example link](https://github.com/vheikkiniemi/FundamentalsOfPythonProgramming2026S/tree/main/Tasks/TaskA)) and a **screenshot of the console** showing the program execution and output.
 
 The folder structure of the Github repo must be as follows:
 
