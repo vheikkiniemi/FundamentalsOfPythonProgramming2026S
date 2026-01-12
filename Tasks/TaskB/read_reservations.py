@@ -6,6 +6,8 @@
 #
 # See LICENSE file in the project root for full license information.
 
+# Modified by nnn according to given task
+
 """
 A program that reads reservation data from a file
 and prints them to the console using functions:

@@ -17,7 +17,7 @@ The goal of this task is to practice:
 
 *   You are given a text file **`reservations.txt`**, where each line contains the details of a single reservation.
 *   You are also given a Python script **`read_reservations.py`**, which reads the reservations from the **`reservations.txt`** file.
-*   The data is separated by a vertical bar `|`. → In the program, line 49 contains `reservation = reservation.split('|')` → a list-type variable `reservation` is used.
+*   The data is separated by a vertical bar `|`. → In the program, line 51 contains `reservation = reservation.split('|')` → a list-type variable `reservation` is used.
 
 > [!NOTE]
 > **You are not allowed to alter the reservations.txt file in this task!**
