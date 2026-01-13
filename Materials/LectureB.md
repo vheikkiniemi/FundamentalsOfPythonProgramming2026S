@@ -393,6 +393,40 @@ Hello Ville, you are 47 years old.
 
 💡 F-strings are extremely useful because they make output more readable and clear.
 
+---
+
+### ✅ Extra Python Tip: Align Text with `f-strings`
+
+You can use **format specifiers** inside an f-string to control alignment and width. For example:
+
+```python
+var = "word"
+print(f"{var:>8}")
+```
+
+**What it does:**
+
+**`:>8` means:**
+ * `>` → **right-align** the value
+ * `8` → **width of 8 characters**
+
+So if `var = 42`, the output will be:
+
+```
+      42
+```
+
+(6 spaces + `42` to make a total width of 8.)
+
+***
+
+💡 Other options:
+
+*   `:<8` → left-align
+*   `:^8` → center-align
+*   You can also combine with fill characters:  
+    `print(f"{var:*^8}")` → `***42***`
+
 ***
 
 ## 🧠 Printing Without Newlines in Multiple Steps
@@ -662,41 +696,3 @@ print("".split())
 *   **splits text into parts** based on a delimiter
 *   **returns a list**
 *   works efficiently for processing files, logs, and text input
-
-Here’s a short tip in English for that:
-
-***
-
-# ✅ Extra Python Tip: Align Text with `f-strings`
-
-You can use **format specifiers** inside an f-string to control alignment and width. For example:
-
-```python
-var = "word"
-print(f"{var:>8}")
-```
-
-**What it does:**
-
-**`:>8` means:**
- * `>` → **right-align** the value
- * `8` → **width of 8 characters**
-
-So if `var = 42`, the output will be:
-
-```
-      42
-```
-
-(6 spaces + `42` to make a total width of 8.)
-
-***
-
-💡 Other options:
-
-*   `:<8` → left-align
-*   `:^8` → center-align
-*   You can also combine with fill characters:  
-    `print(f"{var:*^8}")` → `***42***`
-
-***
