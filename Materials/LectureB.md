@@ -9,8 +9,7 @@ In programming, both **functions** and **methods** perform a task — they take 
 
 ## 🔹 Function
 
-A **function** is an *independent operation* that **does not belong to any specific object**.  
-In Python, many functions are built-in, such as `print()`, `len()`, and `type()`.
+A **function** is an *independent operation* that **does not belong to any specific object**. In Python, many functions are built-in, such as `print()`, `len()`, and `type()`.
 
 ***
 
@@ -29,8 +28,7 @@ In Python, many functions are built-in, such as `print()`, `len()`, and `type()`
 print("This is a function example")
 ```
 
-🔍 Here, `print()` is a **function** that outputs the given text to the console.  
-It works regardless of the type of data you provide (string, int, float, etc.).
+🔍 Here, `print()` is a **function** that outputs the given text to the console. It works regardless of the type of data you provide (string, int, float, etc.).
 
 ```python
 print(123)
@@ -42,8 +40,7 @@ print(["a", "b", "c"])
 
 ## 🔸 Method
 
-A **method** is a *function that belongs to a specific object* — for example, a string, list, or dictionary.  
-A method is **called through the object using the dot operator (. )**.
+A **method** is a *function that belongs to a specific object* — for example, a string, list, or dictionary. A method is **called through the object using the dot operator (. )**.
 
 ***
 
@@ -66,8 +63,7 @@ words = text.split()
 print(words)
 ```
 
-🔍 Here, `split()` is a **method** that belongs to the **string object (`str`)**.  
-It splits the string into parts at spaces and returns a list.
+🔍 Here, `split()` is a **method** that belongs to the **string object (`str`)**. It splits the string into parts at spaces and returns a list.
 
 ```python
 text = "apple,pear,orange"
@@ -106,8 +102,7 @@ print(fruits)
 
 ## 🎯 What Are Functions?
 
-A **function** is a part of a program that performs a specific task.  
-Functions are used to make code **clearer, reusable, and easier to maintain.**
+A **function** is a part of a program that performs a specific task. Functions are used to make code **clearer, reusable, and easier to maintain.**
 
 > 💡 Think of a function as a “small machine” in your program — it takes input, does something, and returns a result.
 
@@ -126,8 +121,7 @@ Functions help you:
 
 ## 🧱 Structure of a Function
 
-In Python, a function is defined using the keyword `def`.  
-General form:
+In Python, a function is defined using the keyword `def`. General form:
 
 ```python
 def function_name(parameters):
@@ -278,8 +272,7 @@ if __name__ == "__main__":
 
 # 🖨️ Python’s `print()` Function – The Core of Output
 
-`print()` is one of Python’s **most commonly used built-in functions**.  
-It allows a program to **display information to the user** — whether it’s text, numbers, calculations, or variable values.
+`print()` is one of Python’s **most commonly used built-in functions**. It allows a program to **display information to the user** — whether it’s text, numbers, calculations, or variable values.
 
 ***
 
@@ -295,8 +288,7 @@ print("Hello world!")
 Hello world!
 ```
 
-➡️ The text is printed to the program’s execution environment (usually the terminal or console).  
-`print()` **does not return a value** — it simply **displays information to the user**.
+➡️ The text is printed to the program’s execution environment (usually the terminal or console). `print()` **does not return a value** — it simply **displays information to the user**.
 
 ***
 
@@ -322,10 +314,7 @@ Hello Ville you are 47 years old.
 
 ## 🔧 Line Breaks and the `end` Parameter
 
-By default, `print()` adds a **newline (`\n`)** at the end of each output.  
-This means every `print()` call starts on a new line.
-
-You can change this behavior using the **`end` parameter**:
+By default, `print()` adds a **newline (`\n`)** at the end of each output. This means every `print()` call starts on a new line. You can change this behavior using the **`end` parameter**:
 
 ```python
 print("Hello", end=" ")
@@ -344,8 +333,7 @@ Hello world!
 
 ## 🔁 Changing the Separator – `sep` Parameter
 
-`sep` defines **what character is used** between arguments.  
-By default, `sep=" "` (a space), but you can change it:
+`sep` defines **what character is used** between arguments. By default, `sep=" "` (a space), but you can change it:
 
 ```python
 print("apple", "banana", "orange", sep=", ")
@@ -508,8 +496,7 @@ A-B-C!
 
 # ✂️ Python’s `split()` Method
 
-`split()` is a **method of string objects (`str`)** that **splits a string into parts** based on a specified **delimiter**.  
-The result is a **list** containing the separate parts of the string.
+`split()` is a **method of string objects (`str`)** that **splits a string into parts** based on a specified **delimiter**. The result is a **list** containing the separate parts of the string.
 
 ***
 
