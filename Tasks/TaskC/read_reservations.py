@@ -22,13 +22,27 @@ int | str | str | str | date | time | int | float | bool | str | datetime
 
 from datetime import datetime
 
+HEADERS = [
+    "reservationId",
+    "name",
+    "email",
+    "phone",
+    "reservationDate",
+    "reservationTime",
+    "durationHours",
+    "price",
+    "confirmed",
+    "reservedResource",
+    "createdAt",
+]
+
 
 def convert_reservation_data(reservation: list) -> list:
     """
     Convert data types to meet program requirements
 
     Parameters:
-     reservation (list): Unconverted reservation -> 11 columns 
+     reservation (list): Unconverted reservation -> 11 columns
 
     Returns:
      converted (list): Converted data types
@@ -68,6 +82,7 @@ def fetch_reservations(reservation_file: str) -> list:
             reservations.append(convert_reservation_data(fields))
     return reservations
 
+
 def confirmed_reservations(reservations: list[list]) -> None:
     """
     Print confirmed reservations
@@ -77,7 +92,8 @@ def confirmed_reservations(reservations: list[list]) -> None:
     """
     print("")
 
-def long_reservations(reservations : list[list]) -> None:
+
+def long_reservations(reservations: list[list]) -> None:
     """
     Print long reservations
 
@@ -85,6 +101,7 @@ def long_reservations(reservations : list[list]) -> None:
      reservations (list): Reservations
     """
     print("")
+
 
 def confirmation_statuses(reservations: list[list]) -> None:
     """
@@ -95,6 +112,7 @@ def confirmation_statuses(reservations: list[list]) -> None:
     """
     print("")
 
+
 def confirmation_summary(reservations: list[list]) -> None:
     """
     Print confirmation summary
@@ -103,6 +121,7 @@ def confirmation_summary(reservations: list[list]) -> None:
      reservations (list): Reservations
     """
     print("")
+
 
 def total_revenue(reservations: list[list]) -> None:
     """
@@ -113,15 +132,33 @@ def total_revenue(reservations: list[list]) -> None:
     """
     print("")
 
+
 def main():
     """
     Prints reservation information according to requirements
     Reservation-specific printing is done in functions
     """
     reservations = fetch_reservations("reservations.txt")
-    print("1) Confirmed Reservations")
-    confirmed_reservations(reservations)
+    # PART A -> Before continuing to part B, make sure that the following lines
+    # print all the reservation data and the correct data types to the console. 
+    # After that, you can remove this section or comment it out up to part B.
+    print(" | ".join(HEADERS))
+    print("------------------------------------------------------------------------")
+    for reservation in reservations:
+        print(" | ".join(str(x) for x in reservation))
+        data_types = [type(x).__name__ for x in reservation]
+        print(" | ".join(data_types))
+        print(
+            "------------------------------------------------------------------------"
+        )
+
+    # PART B -> Build the output required in part B from this using
+    # the predefined functions and the necessary print statements.
+
+    # print("1) Confirmed Reservations")
+    # confirmed_reservations(reservations)
     # Continue from here
+
 
 if __name__ == "__main__":
     main()

@@ -45,7 +45,7 @@ The line contains the following fields:
 
 ***
 
-## 🧠 Part A: Fix `convert_reservation_data`
+## 🧠 PART A: Fix `convert_reservation_data`
 
 In this part, focus on converting a single reservation line into the correct data types.
 
@@ -59,7 +59,7 @@ In this part, focus on converting a single reservation line into the correct dat
 1.  Copy the file **`reservations.txt`** into your own Git repository under the folder `TaskC`.
 2.  Copy the Python script **`read_reservations.py`** into the same `TaskC` folder.
 3.  Rename the Python script file to **`task_c.py`**
-4.  Make sure the program runs with the command → The program prints `1) Confirmed Reservations`:
+4.  Make sure the program runs with the command → The program prints each reservation and the data types on their own separate lines (the reservation number is converted and complies with the task requirements):
 
     ```bash
     python task_c.py
@@ -79,6 +79,7 @@ The script contains a function called **`convert_reservation_data`**, which rece
 
 ```text
 reservationId | name | email | phone | reservationDate | reservationTime | durationHours | price | confirmed | reservedResource | createdAt
+
 int | str | str | str | date | time | int | float | bool | str | datetime
 ```
 
@@ -131,7 +132,7 @@ return [
 
 ### 3️⃣ Testing
 
-Make sure the program runs with the command without erros:
+Make sure the program runs with the command without erros. The program prints each reservation’s details on their own lines. The line is divided into columns, and the data type of each value is shown below the columns.
 
 ```bash
 python task_c.py
@@ -141,7 +142,7 @@ python task_c.py
 
 ### 🧩 Tips
 
-*   Make conversions **in small steps**:
+*   Make conversions **in small steps** → For example:
     *   first `int` and `float`
     *   then `bool`
     *   finally `datetime.date`, `datetime.time`, and `datetime`
@@ -152,7 +153,7 @@ python task_c.py
 
 ***
 
-## 🧠 Part B: Processing Reservations with Loops and Conditionals
+## 🧠 PART B: Processing Reservations with Loops and Conditionals
 
 In this part, build a program that prints **five different summaries** of reservations in one run. All outputs should appear **in the same program execution (i.e., when running `python task_c.py.py`, everything prints in order 1–5)**.
 
@@ -294,6 +295,9 @@ Total revenue from confirmed reservations: 123,50 €
 ## 📤 Submission Instructions to Itslearning
 
 Submit a **link to your GitHub repo** and a **screenshot of the console** showing the program execution and output.
+
+> [!IMPORTANT]
+> Ensure that the program prints only the output for part B.
 
 The folder structure of the Github repo must be as follows:
 
