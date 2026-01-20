@@ -155,7 +155,7 @@ python task_c.py
 
 ## 🧠 PART B: Processing Reservations with Loops and Conditionals
 
-In this part, build a program that prints **five different summaries** of reservations in one run. All outputs should appear **in the same program execution (i.e., when running `python task_c.py.py`, everything prints in order 1–5)**.
+In this part, build a program that prints **five different summaries** of reservations in one run. All outputs should appear **in the same program execution (i.e., when running `python task_c.py`, everything prints in order 1–5)**.
 
 > [!IMPORTANT]  
 > Use the functions in task_c.py to process and print the values. Modify the existing functions (`confirmed_reservations`, `long_reservations`, `confirmation_statuses`, `confirmation_summary`, `total_revenue`) that were specified and supplied.
@@ -297,7 +297,7 @@ Total revenue from confirmed reservations: 123,50 €
 Submit a **link to your GitHub repo** and a **screenshot of the console** showing the program execution and output.
 
 > [!IMPORTANT]
-> Ensure that the program prints only the output for part B.
+> Ensure that the program prints only the output for PART B.
 
 The folder structure of the Github repo must be as follows:
 
