@@ -268,7 +268,8 @@ The folder structure of the Github repo must be as follows:
    ├─ 🐍 task_e.py
    ├─ 📄 week41.csv
    ├─ 📄 week42.csv
-   └─ 📄 week43.csv
+   ├─ 📄 week43.csv
+   └─ 📄 summary.txt
 
 ```
 
