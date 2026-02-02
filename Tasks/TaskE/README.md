@@ -1,7 +1,7 @@
 > [!NOTE]
 > The material was created with the help of ChatGPT and Copilot.
 
-# ⚡Task F - Three Weeks of Electricity Consumption and Production (kWh) to a File
+# ⚡Task E - Three Weeks of Electricity Consumption and Production (kWh) to a File
 
 ## 🎯 Goal
 
