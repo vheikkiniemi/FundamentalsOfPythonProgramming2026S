@@ -25,8 +25,6 @@ The goal of this task is to practice:
 
 ---
 
----
-
 ## 📄 Description
 
 You are provided with:
