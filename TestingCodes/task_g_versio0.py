@@ -60,23 +60,6 @@ def fetch_reservations(reservation_file: str) -> list[list]:
      reservations (list): Read and converted reservations
     """
     reservations = []
-    """
-    reservations.append(
-        [
-            "reservationId",
-            "name",
-            "email",
-            "phone",
-            "reservationDate",
-            "reservationTime",
-            "durationHours",
-            "price",
-            "confirmed",
-            "reservedResource",
-            "createdAt",
-        ]
-    )
-    """
     with open(reservation_file, "r", encoding="utf-8") as f:
         for line in f:
             if len(line) > 1:
@@ -95,49 +78,49 @@ def confirmed_reservations(reservations: list[dict]) -> None:
         if reservation["confirmed"]:
             print(f'- {reservation["name"]}, {reservation["reservedResource"]}, {reservation["reservationDate"].strftime("%d.%m.%Y")} at {reservation["reservationTime"].strftime("%H.%M")}')
 
-def long_reservations(reservations : list[list]) -> None:
+def long_reservations(reservations : list[dict]) -> None:
     """
     Print long reservations
 
     Parameters:
-     reservations (list): Reservations
+     reservations (list[dict]): Reservations
     """
-    for reservation in reservations[1:]:
-        if reservation[6] > 3: # If long
-            print(f'- {reservation[1]}, {reservation[4].strftime("%d.%m.%Y")} at {reservation[5].strftime("%H.%M")}, duration {reservation[6]} h, {reservation[-2]}')
+    for reservation in reservations:
+        if reservation["durationHours"] > 3: # If long
+            print(f'- {reservation["name"]}, {reservation["reservationDate"].strftime("%d.%m.%Y")} at {reservation["reservationTime"].strftime("%H.%M")}, duration {reservation["durationHours"]} h, {reservation["reservedResource"]}')
 
 
-def confirmation_statuses(reservations: list[list]) -> None:
+def confirmation_statuses(reservations: list[dict]) -> None:
     """
     Print confirmation statuses
 
     Parameters:
-     reservations (list): Reservations
+     reservations (list[dict]): Reservations
     """
-    for reservation in reservations[1:]:
-        name : str = reservation[1]
-        confirmed : bool = reservation[8]
+    for reservation in reservations:
+        name : str = reservation["name"]
+        confirmed : bool = reservation["confirmed"]
 
         print(f'{name} → {"Confirmed" if confirmed else "NOT Confirmed"}')
 
-def confirmation_summary(reservations: list[list]) -> None:
+def confirmation_summary(reservations: list[dict]) -> None:
     """
     Print confirmation summary
 
     Parameters:
-     reservations (list): Reservations
+     reservations (list[dict]): Reservations
     """
-    confirmed : int = len([x for x in reservations[1:] if x[8]])
+    confirmed : int = len([x for x in reservations if x["confirmed"]])
     print(f'- Confirmed reservations: {confirmed} pcs\n- Not confirmed reservations: {len(reservations) - confirmed} pcs')
 
-def total_revenue(reservations: list[list]) -> None:
+def total_revenue(reservations: list[dict]) -> None:
     """
     Print total revenue
 
     Parameters:
-     reservations (list): Reservations
+     reservations (list[dict]): Reservations
     """
-    revenue : float = sum(x[6] * x[7] for x in reservations[1:] if x[8])
+    revenue : float = sum(x["durationHours"] * x["price"] for x in reservations if x["confirmed"])
     print(f'Total revenue from confirmed reservations: {revenue:.2f} €'.replace('.', ','))
 
 def main():
@@ -146,17 +129,16 @@ def main():
     Reservation-specific printing is done in functions
     """
     reservations = fetch_reservations("reservations.txt")
-    #print(reservations)
     print("1) Confirmed Reservations")
     confirmed_reservations(reservations)
-    #print("2) Long Reservations (≥ 3 h)")
-    #long_reservations(reservations)
-    #print("3) Reservation Confirmation Status")
-    #confirmation_statuses(reservations)
-    #print("4) Confirmation Summary")
-    #confirmation_summary(reservations)
-    #print("5) Total Revenue from Confirmed Reservations")
-    #total_revenue(reservations)
+    print("2) Long Reservations (≥ 3 h)")
+    long_reservations(reservations)
+    print("3) Reservation Confirmation Status")
+    confirmation_statuses(reservations)
+    print("4) Confirmation Summary")
+    confirmation_summary(reservations)
+    print("5) Total Revenue from Confirmed Reservations")
+    total_revenue(reservations)
 
 if __name__ == "__main__":
     main()
