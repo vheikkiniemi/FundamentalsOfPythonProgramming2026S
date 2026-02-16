@@ -392,6 +392,215 @@ This approach is intuitive, especially for large projects.
 
 In Python, object-oriented programming (OOP) is a core part of the language, but Python does not force you to use it. You can write procedural scripts or build large object-oriented systems → the choice is yours. This flexibility makes Python an excellent teaching language.
 
+## 🔑 Common Object-Oriented Programming Terms
+
+### 🧱 **1. Class**
+
+A blueprint or template for creating objects.  
+Defines attributes (data) and methods (behavior).
+
+```python
+class Car:
+    pass
+```
+
+***
+
+### 🚗 **2. Object (Instance)**
+
+A concrete instance created from a class.
+
+```python
+c = Car()  # c is an object
+```
+
+***
+
+### 🎒 **3. Attribute (Field / Property)**
+
+A variable that belongs to an object or class.
+
+```python
+self.name = "Alice"
+```
+
+*   **Instance attribute** → specific to each object
+*   **Class attribute** → shared across all objects
+
+***
+
+### ⚙️ **4. Method**
+
+A function defined inside a class.
+
+```python
+def drive(self):
+    print("Driving")
+```
+
+***
+
+### 🏗️ **5. Constructor (`__init__`)**
+
+A special method called when creating an object; initializes attributes.
+
+```python
+def __init__(self, name):
+    self.name = name
+```
+
+***
+
+### 📦 **6. Encapsulation**
+
+Bundling data + behavior together, and controlling access.
+
+Examples:
+
+*   Private attributes (`_hidden`)
+*   Public methods
+
+***
+
+### 🧬 **7. Inheritance**
+
+A class can inherit attributes and methods from another class.
+
+```python
+class ElectricCar(Car):
+    pass
+```
+
+***
+
+### 🔁 **8. Polymorphism**
+
+Same interface, different behavior.
+
+Example: two classes both have `.start()`, but each implements it differently.
+
+***
+
+### 🔄 **9. Overriding**
+
+Subclass replaces a method from its parent class.
+
+```python
+class ElectricCar(Car):
+    def start(self):
+        print("Silently starting...")
+```
+
+***
+
+### ➕ **10. Overloading** *(Python supports limited overloading)*
+
+Same method name with different parameter sets.  
+Python mainly emulates this using default arguments or `*args`.
+
+***
+
+### 🧩 **11. Composition**
+
+Building complex objects from smaller objects.
+
+```python
+class Engine:
+    ...
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()
+```
+
+***
+
+### 🧱 **12. Aggregation**
+
+A weaker form of composition — objects can exist independently.
+
+***
+
+### 🧰 **13. Abstraction**
+
+Hiding internal details; showing only the necessary interface.
+
+***
+
+### 🎛️ **14. Interface (Python: Protocol, ABC)**
+
+A group of method signatures that a class promises to implement.
+
+Using `abc` module:
+
+```python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+```
+
+***
+
+### 📚 **15. Namespace**
+
+A “container” where names (variables, functions, classes) live.
+
+Examples:
+
+*   Local namespace
+*   Global namespace
+*   Class namespace
+
+***
+
+### 📦 **16. `self`**
+
+Represents the current object instance inside a class method.
+
+***
+
+### 🏭 **17. Classmethod (`@classmethod`)**
+
+A method that receives the class (`cls`) instead of the instance.
+
+Useful for alternate constructors like `.from_list()`.
+
+***
+
+### 🧪 **18. Staticmethod (`@staticmethod`)**
+
+A method inside a class that does not access instance or class data.
+
+***
+
+### 📐 **19. Property (`@property`)**
+
+Allows method-based attribute access that looks like a normal attribute.
+
+```python
+@property
+def area(self):
+    return self.width * self.height
+```
+
+***
+
+### 🧱 **20. `__dunder__` Methods (Magic Methods)**
+
+Special methods Python uses for operator overloading and object behavior.
+
+Examples:
+
+*   `__init__`
+*   `__repr__`
+*   `__str__`
+*   `__len__`
+*   `__eq__`
+*   `__add__`
+
 ***
 
 ## 🔧 Defining a Class
